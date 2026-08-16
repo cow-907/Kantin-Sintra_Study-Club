@@ -21,7 +21,7 @@
     </a>
   </div>
 
-  <form>
+  <form id="menuForm" action="admin.html" method="get">
     <div class="mb-3">
       <label class="form-label">Foto Menu</label>
       <label for="foto-menu" class="stock-box d-block text-center" style="cursor:pointer;">
@@ -34,12 +34,12 @@
 
     <div class="mb-3">
       <label class="form-label" for="nama-menu">Nama Menu</label>
-      <input type="text" id="nama-menu" class="form-control" placeholder="Masukkan nama menu">
+      <input type="text" id="nama-menu" class="form-control" placeholder="Masukkan nama menu" required>
     </div>
 
     <div class="mb-3">
       <label class="form-label" for="kategori-menu">Kategori</label>
-      <select id="kategori-menu" class="form-select">
+      <select id="kategori-menu" class="form-select" required>
         <option value="" selected>Pilih kategori</option>
         <option value="burger">Burger</option>
         <option value="pizza">Pizza</option>
@@ -51,28 +51,28 @@
       <label class="form-label" for="harga-menu">Harga</label>
       <div class="input-group">
         <span class="input-group-text">Rp</span>
-        <input type="number" id="harga-menu" class="form-control" placeholder="Masukkan harga">
+        <input type="number" id="harga-menu" class="form-control" placeholder="Masukkan harga" required>
       </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label" for="deskripsi-menu">Deskripsi</label>
-      <textarea id="deskripsi-menu" class="form-control" rows="3" placeholder="Masukkan deskripsi menu" style="resize:none;"></textarea>
+      <textarea id="deskripsi-menu" class="form-control" rows="3" placeholder="Masukkan deskripsi menu" style="resize:none;" required></textarea>
     </div>
 
     <div class="mb-0">
       <label class="form-label" for="status-menu">Status</label>
-      <select id="status-menu" class="form-select">
+      <select id="status-menu" class="form-select" required>
         <option value="aktif" selected>Aktif</option>
         <option value="nonaktif">Nonaktif</option>
       </select>
     </div>
-  </form>
 
-  <div class="d-flex justify-content-end gap-2 mt-4">
-    <a href="admin.html" class="btn btn-outline-secondary">Batal</a>
-    <a href="admin.html" class="btn-pesan" style="width:auto; padding:10px 22px;">Simpan</a>
-  </div>
+    <div class="d-flex justify-content-end gap-2 mt-4">
+      <a href="admin.html" class="btn btn-outline-secondary">Batal</a>
+      <button type="submit" class="btn-pesan" style="width:auto; padding:10px 22px; border:none;">Simpan</button>
+    </div>
+  </form>
 
 </div>
 
