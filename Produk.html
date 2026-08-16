@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kantin Sintra - Ayo Pesan Makanan</title>
+
+<!-- Bootstrap 5 (CSS) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Ikon Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<!-- Font Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="app-frame">
+
+    <!-- Header (Bagian Atas) -->
+    <header class="app-header d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+      <a href="Beranda.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <div class="brand-icon"><i class="bi bi-shop"></i></div>
+        <div>
+          <div class="brand-name">Kantin Sintra</div>
+          <div class="brand-sub">Kantin Sintra</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link active" href="Beranda.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="Daftar Menu.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="Tentang Kami.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <div class="input-group header-search d-none d-md-flex" style="width:220px;">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <a href="Keranjang.html" class="icon-btn position-relative" aria-label="Keranjang">
+          <i class="bi bi-cart3"></i>
+          <span id="cart-count" class="badge bg-danger rounded-pill position-absolute" style="top:-6px;right:-6px;min-width:20px;">0</span>
+        </a>
+        <a class="login-link text-decoration-none" href="login.html">Login</a>
+      </div>
+    </header>
+    
+<div class="container min-vh-100 d-flex justify-content-center align-items-center py-5">
+  <div class="card product-card p-4 w-100" style="max-width: 1400px; padding: 3rem;">
+    
+    <!-- Tombol / Ikon Kanan Atas -->
+    <button type="button" class="btn-close position-absolute top-0 end-0 m-4" aria-label="Close" style="font-size: 0.8rem;"></button>
+
+    <div class="row g-4 align-items-center">
+      <!-- Kolom Gambar Produk -->
+      <div class="col-md-5">
+           <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" 
+             alt="Es Teh" class="img-fluid product-img" style="width: 100%; height: 520px; object-fit: cover; border-radius: 18px;">
+      </div>
+
+      <!-- Kolom Informasi Produk -->
+      <div class="col-md-7">
+        <div class="ps-md-2">
+          
+          <!-- Kategori -->
+          <div class="mb-2">
+            <span class="badge-category">Minuman</span>
+          </div>
+
+          <!-- Nama & Harga -->
+          <h2 class="product-title mb-1">Es Teh</h2>
+          <div class="product-price mb-3">Rp 5.000</div>
+
+          <!-- Status Stok -->
+          <div class="stock-box mb-4">
+            Stok: Tersedia
+          </div>
+
+          <!-- Deskripsi Produk -->
+          <h6 class="fw-bold mb-2">Deskripsi Produk</h6>
+          <p class="text-secondary small mb-4">Minuman Dingin dengan Teh Murni dari Kerinci</p>
+
+          <!-- Input Jumlah & Total -->
+          <div class="mb-4">
+            <label class="form-label small fw-bold mb-2 d-block">Jumlah</label>
+            <div class="d-flex align-items-center gap-3">
+              <div class="input-group input-group-sm" style="width: auto;">
+                <button id="qty-minus" class="btn btn-outline-secondary px-2" type="button">-</button>
+                <input id="qty-input" type="text" class="form-control qty-input fw-semibold" value="1" readonly>
+                <button id="qty-plus" class="btn btn-outline-secondary px-2" type="button">+</button>
+              </div>
+              <span class="text-muted small">Total: <strong id="total-price" class="text-dark">Rp 5.000</strong></span>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi -->
+          <div class="row g-2">
+            <div class="col-6">
+              <a id="btn-addcart" href="Keranjang.html" class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-cart"></i> Tambah ke Keranjang
+              </a>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-custom-primary w-100 py-2">
+                Beli Sekarang
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  </body>
+  </html>
+</html>

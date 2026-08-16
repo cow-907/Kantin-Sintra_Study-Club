@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Kantin Sintra</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="card product-card p-4" style="max-width:420px; width:100%;">
+      <div class="text-center mb-3">
+        <h3 class="fw-bold mb-0">Masuk ke Akun</h3>
+        <div class="text-muted small">Selamat datang kembali di RM Sintra</div>
+      </div>
+
+      <form action="#" method="post">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="nama@email.com" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Kata Sandi</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan kata sandi" required>
+            <button class="btn btn-outline-secondary" type="button" id="togglePwd" aria-label="Tampilkan kata sandi"><i class="bi bi-eye"></i></button>
+          </div>
+        </div>
+
+        <div class="d-grid mb-3">
+          <button type="submit" class="btn btn-custom-primary">Masuk ➜</button>
+        </div>
+
+        <div class="d-grid">
+          <a href="Beranda.html" class="btn btn-outline-custom">Lanjutkan sebagai Pembeli</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

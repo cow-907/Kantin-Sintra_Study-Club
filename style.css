@@ -1,0 +1,556 @@
+:root{
+  --bg-outer:#D1ECF9;
+  --bg-app:#F0F7FB;
+  --green:#1E6F5C;
+  --orange:#ff8f2e;
+  --navy:#0B4B6F;
+  --navy-2:#0F5D82;
+  --text-dark:#111111;
+  --text-muted:#555555;
+  --text-soft:#8492A6;
+  --blue-btn:#3D7BF2;
+}
+
+html,body{
+  height:100%;
+  background:var(--bg-outer);
+  font-family:'Inter',sans-serif;
+  color:var(--text-dark);
+}
+
+h1,h2,h3,h4,.font-heading{
+  font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   APP SHELL START
+   Pembungkus utama aplikasi: `.app-shell` & `.app-frame`
+   Digunakan Beranda.html, pizza.html, minuman.html, Keranjang.html
+   ========================= */
+.app-shell{
+  max-width:1440px;
+  margin:0 auto;
+  padding:64px 80px;
+}
+
+.app-frame{
+  background:var(--bg-app);
+  border-radius:32px;
+  box-shadow:0px 16px 48px rgba(5,69,105,0.13);
+  padding:24px;
+}
+/* =========================
+   APP SHELL END
+   ========================= */
+
+/* =========================
+   NAVBAR START
+   Header & navigasi: logo, menu, ikon, search, dan tombol Login
+   Digunakan Beranda.html, pizza.html, minuman.html, Produk.html
+   ========================= */
+.app-header{
+  background:rgba(255,255,255,0.95);
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  box-shadow:0px 1px 3px rgba(0,0,0,0.1), 0px 1px 2px -1px rgba(0,0,0,0.1);
+  border-radius:16px;
+  padding:12px 24px;
+}
+
+.brand-icon{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#E8432C;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:20px;
+  flex:none;
+}
+
+.brand-name{
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  font-size:18px;
+  color:var(--green);
+  line-height:1.2;
+}
+
+.brand-sub{
+  font-size:12px;
+  color:var(--text-muted);
+}
+
+.main-nav .nav-link{
+  color:var(--text-muted);
+  font-size:16px;
+  padding:8px 16px;
+  border-radius:8px;
+}
+
+.main-nav .nav-link.active{
+  color:var(--orange);
+  font-weight:500;
+}
+
+.icon-btn{
+  width:44px;
+  height:44px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-dark);
+}
+/* Tombol kembali pada halaman (mis. Keranjang) */
+.back-link{
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:6px 10px;
+  border-radius:8px;
+  color:var(--text-dark);
+}
+.back-link:hover{ background:#fafafa; text-decoration:none; color:var(--text-dark); }
+
+.header-search{
+  border-radius:24px;
+  background:#F7F7F7;
+  border:1px solid rgba(0,0,0,0.06);
+}
+.header-search .form-control{
+  background:transparent;
+  border:none;
+  box-shadow:none;
+}
+.header-search .input-group-text{
+  background:transparent;
+  border:none;
+  color:var(--text-soft);
+}
+
+/* Styling khusus untuk link Login agar konsisten di header */
+.login-link{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:8px;
+  color:var(--navy-2);
+  font-weight:600;
+}
+.login-link:hover{ text-decoration:none; color:var(--navy); }
+/* =========================
+   NAVBAR END
+   ========================= */
+
+/* =========================
+   WELCOME / TOOLBAR START
+   Sapaan pengguna,
+   ========================= */
+.welcome-eyebrow{
+  color:var(--text-soft);
+  font-size:14px;
+}
+
+.welcome-title{
+  font-weight:700;
+  font-size:32px;
+  color:var(--text-dark);
+}
+
+/* =========================
+   WELCOME / TOOLBAR END
+   ========================= */
+
+/* =========================
+   PROMO BANNER START
+   Banner promo besar di halaman Beranda / kategori
+   ========================= */
+.promo-banner{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+  border-radius:24px;
+  color:#fff;
+  padding:40px 48px;
+  position:relative;
+  overflow:hidden;
+  min-height:230px;
+}
+
+.promo-banner h2{
+  font-weight:700;
+  font-size:28px;
+  line-height:1.3;
+  max-width:420px;
+}
+
+.promo-banner .discount{
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  font-size:48px;
+}
+
+.promo-illustration{
+  position:absolute;
+  right:24px;
+  bottom:0;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  font-size:80px;
+  opacity:0.9;
+}
+/* =========================
+   PROMO BANNER END
+   ========================= */
+
+/* =========================
+   CATEGORY PILLS START
+   Judul kategori serta tombol kategori (pill) dan status aktif/non-aktif
+   Digunakan oleh: Beranda.html, pizza.html, minuman.html
+   ========================= */
+.category-title{
+  font-weight:700;
+  font-size:20px;
+}
+
+.category-pill{
+  border:1px solid rgba(0,0,0,0.08);
+  background:#fff;
+  color:var(--text-dark);
+  border-radius:24px;
+  padding:10px 20px;
+  font-size:15px;
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+}
+
+.category-pill.active{
+  background:var(--orange);
+  border-color:var(--orange);
+  color:#fff;
+}
+
+.category-pill i{ color:var(--orange); }
+.category-pill.active i{ color:#fff; }
+.category-pill.btn-primary i{ color:#fff; }
+.category-pill.btn-outline-secondary i{ color:var(--navy-2); }
+/* =========================
+   CATEGORY PILLS END
+   ========================= */
+
+/* =========================
+   POPULAR MENU / FOOD CARD START
+   Kartu produk di bagian "Menu Populer" dan daftar produk
+   ========================= */
+.section-title{ font-weight:700; font-size:22px; }
+
+.see-all{
+  color:var(--orange);
+  font-weight:500;
+  text-decoration:none;
+  font-size:15px;
+}
+
+.food-card{
+  background:#fff;
+  border-radius:24px;
+  padding:16px 16px 20px;
+  height:100%;
+  position:relative;
+}
+
+.food-card .badge-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--orange);
+  font-size:14px;
+}
+
+.food-card .badge-row .heart{ color:var(--text-soft); }
+
+.food-card img{
+  width:100%;
+  height:200px;
+  object-fit:contain;
+  border-radius:16px;
+  margin:8px 0 12px;
+  background: #f6f8fa;
+  display:block;
+  padding:8px;
+}
+
+.food-card .food-name{
+  font-weight:700;
+  font-size:17px;
+  margin-bottom:4px;
+}
+
+.food-card .food-price{
+  color:var(--green);
+  font-weight:700;
+  font-size:18px;
+  margin-bottom:14px;
+}
+/* =========================
+   POPULAR MENU / FOOD CARD END
+   ========================= */
+
+/* =========================
+   BUTTONS START
+   Tombol pesan/aksi umum dan varian warna Bootstrap (primary/outline-secondary)
+   ========================= */
+.btn-pesan{
+  background:var(--blue-btn);
+  color:#fff;
+  border-radius:10px;
+  font-weight:500;
+  padding:10px;
+  width:100%;
+  border:none;
+}
+.btn-pesan:hover{
+  background:#2f66d6;
+  color:#fff;
+}
+
+/* Sesuaikan warna tombol untuk kategori */
+.btn-primary{
+  background-color:var(--orange) !important;
+  border-color:var(--orange) !important;
+  color:#fff !important;
+}
+.btn-primary:hover{
+  background-color:#e67a1f !important;
+  border-color:#e67a1f !important;
+}
+.btn-outline-secondary{
+  color:var(--navy-2) !important;
+  border-color:rgba(11,75,111,0.15) !important;
+}
+.btn-outline-secondary:hover{
+  background-color:rgba(15,93,130,0.06) !important;
+}
+/* =========================
+   BUTTONS END
+   ========================= */
+
+/* =========================
+   RESPONSIVE / MEDIA QUERIES START
+   Mempengaruhi tata letak pada layar kecil: hide nav, adjust padding
+   ========================= */
+@media (max-width: 991px){
+  .app-shell{padding:24px;}
+  .main-nav{display:none;}
+  .promo-illustration{display:none;}
+}
+
+@media (max-width: 575px){
+  .app-frame{padding:16px;}
+}
+/* =========================
+   RESPONSIVE / MEDIA QUERIES END
+   ========================= */
+
+/* =========================
+   PRODUCTS / CART START
+   Styling untuk halaman `Produk.html` dan `Keranjang.html`:
+   - Kartu produk, gambar produk, kontrol qty, ringkasan belanja
+   ========================= */
+body {
+  background-color: #eaf4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: none;
+  position: relative;
+}
+
+.badge-category {
+  background-color: #f1f3f5;
+  color: #6c757d;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.product-title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #000;
+}
+
+.product-price {
+  color: #1b7a57;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.stock-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.btn-outline-custom {
+  color: #1b7a57;
+  border-color: #1b7a57;
+  border-width: 1.5px;
+  font-weight: 600;
+}
+.btn-outline-custom:hover {
+  background-color: #1b7a57;
+  color: #fff;
+}
+
+.btn-custom-primary {
+  background-color: #1b7a57;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+}
+.btn-custom-primary:hover {
+  background-color: #145c41;
+  color: #ffffff;
+}
+
+.qty-input {
+  max-width: 45px;
+  text-align: center;
+  border-color: #dee2e6;
+  background-color: #f8f9fa;
+}
+
+.product-img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+.header-title {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Cart Item Card Styling */
+.cart-item-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+/* Layout tweaks: memberi celah antara gambar+info dan bagian harga */
+.cart-item-card .d-flex.align-items-center {
+  gap: 18px;
+}
+
+.item-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(11,75,111,0.06);
+}
+
+/* Kontrol jumlah (qty) — ukuran sedikit lebih besar dan border lembut */
+.btn-qty {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+.btn-qty:active { transform: translateY(1px); }
+
+.qty-input {
+  width: 48px;
+  height: 36px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 4px;
+}
+
+/* Icon hapus (trash) diselaraskan ke atas-kanan dalam blok harga */
+.cart-item-card .text-end { min-width: 150px; }
+.trash-icon {
+  color: #e57373;
+  cursor: pointer;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+.trash-icon:hover { color: #d32f2f; }
+
+.unit-calc {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.price-green {
+  color: #1b7a57;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+/* Summary Card Styling */
+.summary-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.btn-checkout {
+  background-color: #1b7a57;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+}
+.btn-checkout:hover {
+  background-color: #145c41;
+  color: #ffffff;
+}
+
+.btn-continue {
+  color: #5bb396;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  text-align: center;
+  display: block;
+}
+.btn-continue:hover {
+  color: #1b7a57;
+}
+/* =========================
+   PRODUCTS / CART END
+   ========================= */
