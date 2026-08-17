@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 require 'includes/init.php';
 
 if (sudahLogin()) {
     if (isAdmin()) {
-        header('Location: admin/menu.php');
+        header('Location: /kantin-sintra-php/admin/menu.php');
     } else {
-        header('Location: index.php');
+        header('Location: /kantin-sintra-php/index.php');
     }
     exit;
 }
@@ -17,29 +17,22 @@ if (isset($_GET['guest'])) {
     $_SESSION['nama']    = 'Pembeli';
     $_SESSION['email']   = 'pembeli@local';
     $_SESSION['role']    = 'user';
-    header('Location: index.php');
+    header('Location: /kantin-sintra-php/index.php');
     exit;
 }
 
 $error = '';
 
-// Admin login flow
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = trim($_POST['email'] ?? '');
-    $password = $_POST['password'] ?? '';
+    // FORMALITAS SAJA: Langsung masuk sebagai Admin
+    session_regenerate_id(true);
+    $_SESSION['user_id'] = 1;
+    $_SESSION['nama']    = 'Admin';
+    $_SESSION['email']   = $_POST['email'] ?? 'admin@admin.com';
+    $_SESSION['role']    = 'admin';
 
-    if ($email === '' || $password === '') {
-        $error = 'Email dan kata sandi wajib diisi.';
-    } else {
-        session_regenerate_id(true);
-        $_SESSION['user_id'] = 1;
-        $_SESSION['nama']    = 'Admin';
-        $_SESSION['email']   = $email;
-        $_SESSION['role']    = 'admin';
-
-        header('Location: admin/menu.php');
-        exit;
-    }
+    header('Location: /kantin-sintra-php/admin/menu.php');
+    exit;
 }
 ?>
 <!doctype html>
@@ -50,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>Login - Kantin Sintra</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/kantin-sintra-php/assets/css/style.css">
 </head>
 <body>
   <div class="container min-vh-100 d-flex align-items-center justify-content-center py-4">

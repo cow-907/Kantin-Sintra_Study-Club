@@ -1,0 +1,45 @@
+﻿<?php
+require '../includes/init.php';
+wajibAdmin();
+
+$id = (int) ($_GET['id'] ?? 0);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Lakukan penghapusan jika form dikirim (POST)
+    $pdo->prepare("DELETE FROM produk WHERE id = ?")->execute([$id]);
+    setFlash('success', 'Produk dihapus.');
+    header('Location: menu.php');
+    exit;
+}
+?>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hapus Menu</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/kantin-sintra-php/assets/css/style.css">
+</head>
+<body style="background:#F0F7FB; padding-top:40px;">
+
+<div class="food-card mx-auto text-center" style="max-width:360px; margin-top:20vh;">
+
+  <div class="brand-icon mx-auto mb-3" style="width:64px; height:64px; font-size:26px;">
+    <i class="bi bi-trash-fill"></i>
+  </div>
+
+  <p class="category-title mb-4">Yakin ingin menghapus menu ini?</p>
+
+  <form action="hapus_menu.php?id=<?= $id ?>" method="post" class="d-flex justify-content-center gap-3">
+    <a href="menu.php" class="btn btn-outline-secondary" style="width:120px;">Batal</a>
+    <button type="submit" class="btn btn-danger" style="width:120px;">Hapus</button>
+  </form>
+
+</div>
+
+</body>
+</html>
