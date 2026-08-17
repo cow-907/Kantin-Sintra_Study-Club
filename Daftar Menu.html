@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar Menu - Kantin Sintra</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="app-frame">
+
+    <!-- Header -->
+    <header class="app-header d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+      <a href="Beranda.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <div class="brand-icon"><i class="bi bi-shop"></i></div>
+        <div>
+          <div class="brand-name">Kantin Sintra</div>
+          <div class="brand-sub">Kantin Sintra</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="Beranda.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Daftar Menu.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="Tentang Kami.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <form action="Daftar Menu.html" method="get" class="d-none d-md-flex" style="width:220px;">
+          <div class="input-group header-search">
+            <input name="q" type="search" class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+        <a href="Keranjang.html" class="icon-btn"><i class="bi bi-cart3"></i></a>
+        <a class="login-link text-decoration-none" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <!-- Judul Halaman -->
+    <div class="mb-3">
+      <h3 class="section-title">Semua Produk</h3>
+      <div class="text-muted small">Menampilkan 8 produk</div>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="card mb-4 p-3">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <label class="form-label small mb-1">Kategori</label>
+          <select class="form-select">
+            <option>Semua Produk</option>
+            <option>Burger</option>
+            <option>Pizza</option>
+            <option>Minuman</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label small mb-1">Urutkan</label>
+          <select class="form-select">
+            <option>Nama A-Z</option>
+            <option>Nama Z-A</option>
+            <option>Harga Rendah ke Tinggi</option>
+            <option>Harga Tinggi ke Rendah</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-md-end">
+          <label class="form-label small mb-1 d-block invisible">Search</label>
+          <div class="input-group">
+            <input class="form-control" placeholder="Cari produk...">
+            <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid Produk -->
+    <div class="row g-4">
+
+      <!-- Beef Burger -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Makanan</span></div>
+          <img src="https://i.pinimg.com/736x/b4/95/e7/b495e7922f7313e4cc00912740feeade.jpg" alt="Beef Burger">
+          <div class="food-name">Beef Burger</div>
+          <div class="food-price">Rp. 25.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Cheese Burger -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Makanan</span></div>
+          <img src="https://i.pinimg.com/736x/c7/05/23/c70523c237c9047733d3151ae04682a8.jpg" alt="Cheese Burger">
+          <div class="food-name">Cheese Burger</div>
+          <div class="food-price">Rp 30.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Chicken Burger -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Makanan</span></div>
+          <img src="https://i.pinimg.com/736x/97/99/cc/9799cc9759a92aa73ba4b4a0b5177790.jpg" alt="Chicken Burger">
+          <div class="food-name">Chicken Burger</div>
+          <div class="food-price">Rp 29.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Vegan Pizza -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Makanan</span></div>
+          <img src="https://i.pinimg.com/736x/cd/92/21/cd9221da548fcf1ccc5808d7f387094b.jpg" alt="Vegan Pizza">
+          <div class="food-name">Vegan Pizza</div>
+          <div class="food-price">Rp 29.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Es Teh -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Minuman</span></div>
+          <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Es Teh">
+          <div class="food-name">Es Teh</div>
+          <div class="food-price">Rp 5.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Matcha -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Minuman</span></div>
+          <img src="https://i.pinimg.com/736x/68/1b/09/681b0999bafb3a7cf775f127e837a568.jpg" alt="Matcha">
+          <div class="food-name">Matcha</div>
+          <div class="food-price">Rp 20.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Chocolate Milkshake -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Minuman</span></div>
+          <img src="https://i.pinimg.com/1200x/dc/83/37/dc833736a16a5d16416c76348d860b15.jpg" alt="Chocolate Milkshake">
+          <div class="food-name">Chocolate Milkshake</div>
+          <div class="food-price">Rp 15.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Strawberry Milkshake -->
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row"><span class="badge bg-light text-success small">Minuman</span></div>
+          <img src="https://i.pinimg.com/1200x/ba/c1/79/bac179ec87b3bfcb3ded5a10cf09fb5a.jpg" alt="Strawberry Milkshake">
+          <div class="food-name">Strawberry Milkshake</div>
+          <div class="food-price">Rp 16.000</div>
+          <a href="Keranjang.html" class="btn btn-custom-primary mt-3"><i class="bi bi-cart3"></i> Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

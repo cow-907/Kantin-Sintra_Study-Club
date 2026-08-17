@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kantin Sintra - Ayo Pesan Makanan</title>
+
+<!-- Bootstrap 5 (CSS) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Ikon Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<!-- Font Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="app-frame">
+
+    <!-- Header (Bagian Atas) -->
+    <header class="app-header d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+      <a href="Beranda.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <div class="brand-icon"><i class="bi bi-shop"></i></div>
+        <div>
+          <div class="brand-name">Kantin Sintra</div>
+          <div class="brand-sub">Kantin Sintra</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link active" href="Beranda.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="Daftar Menu.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="Tentang Kami.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <div class="input-group header-search d-none d-md-flex" style="width:220px;">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <a href="Keranjang.html" class="icon-btn"><i class="bi bi-cart3"></i></a>
+        <a class="login-link text-decoration-none" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <!--Kata Sambutan-->
+    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+      <div>
+        <div class="welcome-eyebrow">Selamat Datang</div>
+        <h1 class="welcome-title mb-0">Ayo Pesan Makanan</h1>
+      </div>
+    </div>
+
+    <!-- Banner Promo -->
+    <div class="promo-banner mb-4">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2>Pesan Makanan dan Dapatkan Diskon Hingga</h2>
+          <div class="discount">Diskon 50%</div>
+        </div>
+      </div>
+      <div class="promo-illustration d-none d-lg-flex">
+        <i class="bi bi-people-fill"></i>
+      </div>
+    </div>
+
+    <!-- Kategori -->
+    <div class="mb-3">
+      <div class="category-title mb-3">Kategori</div>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="category-pill btn btn-primary btn-sm" href="Beranda.html">Burger</a>
+        <a class="category-pill btn btn-outline-secondary btn-sm" href="pizza.html">Pizza</a>
+        <a class="category-pill btn btn-outline-secondary btn-sm" href="minuman.html">Minuman</a>
+      </div>
+    </div>
+
+    <!-- Menu Populer -->
+    <div class="d-flex align-items-center justify-content-between mb-3 mt-4">
+      <div class="section-title">Menu Populer</div>
+      <a href="Daftar Menu.html" class="see-all">Lihat Semua</a>
+    </div>
+
+    <div class="row g-3">
+
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row">
+            
+          </div>
+          <img src="https://i.pinimg.com/736x/b4/95/e7/b495e7922f7313e4cc00912740feeade.jpg" alt="Burger Daging">
+          <div class="food-name">Burger Daging</div>
+          <div class="food-price">Rp. 25.000</div>
+          <a href="Produk.html" class="btn-pesan d-block text-center">Pesan</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row">
+            
+          </div>
+          <img src="https://i.pinimg.com/736x/c7/05/23/c70523c237c9047733d3151ae04682a8.jpg" alt="Burger Keju">
+          <div class="food-name">Burger Keju</div>
+          <div class="food-price">Rp 30.000</div>
+          <a href="Produk.html" class="btn-pesan d-block text-center">Pesan</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row">
+            
+          </div>
+          <img src="https://i.pinimg.com/736x/97/99/cc/9799cc9759a92aa73ba4b4a0b5177790.jpg" alt="Burger Ayam">
+          <div class="food-name">Burger Ayam</div>
+          <div class="food-price">Rp 29.000</div>
+          <a href="Produk.html" class="btn-pesan d-block text-center">Pesan</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="food-card">
+          <div class="badge-row">
+            
+          </div>
+          <img src="https://i.pinimg.com/1200x/27/ab/5e/27ab5edd0885b823023a2b5ba47a1f04.jpg" alt="Burger Vegan">
+          <div class="food-name">Burger Vegan</div>
+          <div class="food-price">Rp 30.000</div>
+          <a href="Produk.html" class="btn-pesan d-block text-center">Pesan</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
